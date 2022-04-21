@@ -17,9 +17,9 @@ namespace Logika
         }
         public void ruch_kulki()
         {
-            Random rnd = new Random();
+            Random rnd = new Random(2);
             ruch_x = rnd.Next();
-            rnd = new Random();
+            rnd = new Random(2);
             ruch_y = rnd.Next();
             switch (ruch_x)
             {
