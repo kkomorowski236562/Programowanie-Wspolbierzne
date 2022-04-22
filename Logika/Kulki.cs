@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Logika
 {
-    internal class Kulka : KulkiAPI
+    internal class Kulki : KulkiApi
     {
-        private int ID;
-        public Kulka(int id, int x, int y, int x_ruch, int y_ruch)
+        public Kulki(int id, int x, int y, int x_ruch, int y_ruch)
         {
             ID = id;
             X = x;
@@ -17,10 +16,10 @@ namespace Logika
             X_ruch = x_ruch;
             Y_ruch = y_ruch;
         }
-    }
 
-    public override int GetID()
-    {
-        return ID;
+        public override int GetID()
+        {
+            return ID;
+        }
     }
 }

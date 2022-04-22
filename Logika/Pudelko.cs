@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Logika
 {
-    internal class Manager : KulkiAPI
+    internal class Pudelko : PudelkoApi
     {
+        public Pudelko(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
     }
 }
