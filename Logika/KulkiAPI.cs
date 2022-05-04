@@ -8,15 +8,29 @@ namespace Logika
 {
     public abstract class KulkiApi
     {
+        private PudelkoApi P;
         public abstract int GetID();
-        public static KulkiApi stworz_kulke(int id, int x, int y, int x_ruch, int y_ruch)
+        public static KulkiApi stworz_kulke()
         {
-            return new Kulki(id, x, y, x_ruch, y_ruch);
+            Console.WriteLine("Podaj ilosc kulek: ");
+            string kule = Console.ReadLine();
+            int kule2 = Convert.ToInt32(kule);
+            int[] ilosc_id = new int[kule2];
+            for (int i = 0; i < kule2; i++)
+            {
+                ilosc_id[i] = i + 1;
+                return new Kulki(ilosc_id[i]);
+            }
+            return new Kulki(1);
         }
+
+        public PudelkoApi getP()
+        {
+            return P;
+        }
+
         public int X { get; set; }
         public int Y { get; set; }
-        public int X_ruch { get; set; }
-        public int Y_ruch { get; set; }
         public int ID { get; set; }
     }
 }

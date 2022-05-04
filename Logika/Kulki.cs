@@ -8,13 +8,41 @@ namespace Logika
 {
     internal class Kulki : KulkiApi
     {
-        public Kulki(int id, int x, int y, int x_ruch, int y_ruch)
+        public Kulki(int id)
         {
+            Random rand = new Random();
+            int ran = rand.Next(getP().X);
+            int yan = rand.Next(getP().Y);
             ID = id;
-            X = x;
-            Y = y;
-            X_ruch = x_ruch;
-            Y_ruch = y_ruch;
+            X = ran;
+            Y = yan;
+        }
+
+        public void move()
+        {
+            while(true)
+            {
+                if(X>getP().getNegX() || Y>getP().getNegY())
+                {
+                    X--;
+                    Y--;
+                }
+                if(X>getP().getNegX() || Y<getP().Y)
+                {
+                    X--;
+                    Y++;
+                }
+                if(X<getP().X || Y<getP().Y)
+                {
+                    X++;
+                    Y++;
+                }
+                if(X<getP().X || Y>getP().getNegY())
+                {
+                    X++;
+                    Y--;
+                }
+            }
         }
 
         public override int GetID()
