@@ -1,5 +1,0 @@
-C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\Testy\obj\Debug\net6.0\Testy.csproj.AssemblyReference.cache
-C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\Testy\obj\Debug\net6.0\Testy.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\Testy\obj\Debug\net6.0\Testy.AssemblyInfoInputs.cache
-C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\Testy\obj\Debug\net6.0\Testy.AssemblyInfo.cs
-C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\Testy\obj\Debug\net6.0\Testy.csproj.CoreCompileInputs.cache
