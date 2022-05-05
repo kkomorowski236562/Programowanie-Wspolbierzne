@@ -32,7 +32,7 @@ namespace Logika
 
         public void moveKulke()
         {
-            for(int i =0; i<Kulkis.Capacity(); i++)
+            for(int i =0; i<Kulkis.Count(); i++)
                 Kulkis[i].move(Size);
         }
     }
