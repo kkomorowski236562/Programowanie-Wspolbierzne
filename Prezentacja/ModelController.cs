@@ -13,7 +13,7 @@ namespace Model
             return new Object(L == null ? logika.CreateLayer() : L);
         }
 
-        public abstract ObservableCollection<Model> GetModels();
+        public abstract ObservableCollection<Model1> GetModels();
 
         public abstract void Start();
         public abstract void Stop();
@@ -25,9 +25,9 @@ namespace Model
         // implementacja Api
         private class Object : ModelController
         {
-            private ObservableCollection<Model> Circles = new ObservableCollection<Model>();
+            private ObservableCollection<Model1> Circles = new ObservableCollection<Model1>();
 
-            public override ObservableCollection<Model> GetModels()
+            public override ObservableCollection<Model1> GetModels()
             {
                 return Circles;
             }
@@ -36,12 +36,12 @@ namespace Model
                 logika = l;
             }
 
-            override public void StartMoving()
+            override public void Start()
             {
                 logika.Start();
             }
 
-            public override void StopMoving()
+            public override void Stop()
             {
                 logika.Stop();
             }
@@ -49,15 +49,15 @@ namespace Model
 
             override public int getSize()
             {
-                return logika.PudelkoSize();
+                return logika.Wielkosc_pudelka();
             }
 
             public override void dodaj_kulke(int ilosc)
             {
                 for( int i = 0; i< ilosc; i++ )
                 {
-                    logika.addKulki();
-                    Circles.Add(new Model(logika.addKulki()));
+                    logika.dodaj_kulke();
+                    Circles.Add(new Model1(logika.dodaj_kulke()));
 
                 }
 

@@ -5,12 +5,12 @@ using Logika;
 
 namespace Model
 {
-    public class Model
+    public class Model1
     {
         private int Promien = 5;
         private int PosX;
         private int PosY;
-        public Model(Kulki k)
+        public Model1(Kulki k)
         {
             this.PosX = k.X;
             this.PosY = k.Y;

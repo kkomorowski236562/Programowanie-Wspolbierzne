@@ -16,9 +16,9 @@ using System.Windows.Shapes;
 namespace View
 
 {
-    public partial class View : Window
+    public partial class MainWindow : Window
     {
-        public View()
+        public MainWindow()
         {
             InitializeComponent();
         }

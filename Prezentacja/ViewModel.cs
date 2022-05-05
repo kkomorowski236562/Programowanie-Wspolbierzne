@@ -7,7 +7,7 @@ namespace ViewModel
 {
     public class ViewModel : INotifyPropertyChanged
     {
-        private ModelController M;
+        private ModelController M1;
 
         public event PropertyChangedEventHandler PropertyChanged;
 

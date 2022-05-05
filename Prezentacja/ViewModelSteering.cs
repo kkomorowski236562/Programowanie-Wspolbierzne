@@ -1,6 +1,7 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Model;
 
 namespace ViewModel
 {
@@ -46,7 +47,7 @@ namespace ViewModel
         }
         private ModelController ModelLayer;
         private string number;
-        public ObservableCollection<Model> Kulki;
+        public ObservableCollection<Model1> Kulki;
     }
 
 
