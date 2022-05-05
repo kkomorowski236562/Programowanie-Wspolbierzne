@@ -1,0 +1,5 @@
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\Prezentacja\obj\Debug\Prezentacja.csproj.AssemblyReference.cache
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\Prezentacja\obj\Debug\Prezentacja.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\Prezentacja\obj\Debug\View.g.cs
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\Prezentacja\obj\Debug\Prezentacja_MarkupCompile.cache
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\Prezentacja\obj\Debug\Prezentacja_MarkupCompile.lref
