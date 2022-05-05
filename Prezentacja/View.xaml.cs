@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Prezentacja
+namespace View
+
 {
-    public partial class MainWindow : Window
+    public partial class View : Window
     {
-        public MainWindow()
+        public View()
         {
             InitializeComponent();
-            this.Title = "Hello World";
         }
     }
 }

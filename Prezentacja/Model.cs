@@ -1,22 +1,19 @@
-﻿using Logika;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using Logika;
 
-namespace Prezentacja
+namespace Model
 {
-    public class Main
+    public class Model
     {
-        private readonly KulkiApi kule;
-        
-        internal Main(int width, int height)
+        private int Promien = 5;
+        private int PosX;
+        private int PosY;
+        public Model(Kulki k)
         {
-            width = kule.getP().X + 100;
-            height = kule.getP().Y + 100;
-            kule = KulkiApi.stworz_kulke();
+            this.PosX = k.X;
+            this.PosY = k.Y;
         }
     }
-
 }
