@@ -6,48 +6,35 @@ using System.Threading.Tasks;
 
 namespace Logika
 {
-    internal class Kulki : KulkiApi
+    public class Kulki
     {
-        public Kulki(int id)
+        public int X { get; private set; }
+        public int Y { get; private set; }
+        public int ID { get; private set; }
+        public int SzX { get; private set; }
+        public int SzY { get; private set; }
+
+        public Kulki(int id, int X, int Y, int SzX, int SzY)
         {
             Random rand = new Random();
-            int ran = rand.Next(getP().X);
-            int yan = rand.Next(getP().Y);
-            ID = id;
-            X = ran;
-            Y = yan;
+            this.ID = id;
+            this.X = X;
+            this.Y = Y;
+            this.SzX = SzX;
+            this.SzY = SzY;
         }
 
-        public void move()
+        public void move(int Wielkosc)
         {
-            while(true)
-            {
-                if(X>getP().getNegX() || Y>getP().getNegY())
-                {
-                    X--;
-                    Y--;
-                }
-                if(X>getP().getNegX() || Y<getP().Y)
-                {
-                    X--;
-                    Y++;
-                }
-                if(X<getP().X || Y<getP().Y)
-                {
-                    X++;
-                    Y++;
-                }
-                if(X<getP().X || Y>getP().getNegY())
-                {
-                    X++;
-                    Y--;
-                }
-            }
-        }
+            int NX = X + SzX;
+            int NY = Y + SzY;
 
-        public override int GetID()
-        {
-            return ID;
+            if( NX > Wielkosc || NX < 0)
+                SzX *= -1;
+            if( NY > Wielkosc || NY < 0)
+                SzY *= -1;
+            X += SzX;
+            Y += SzY;
         }
     }
 }
