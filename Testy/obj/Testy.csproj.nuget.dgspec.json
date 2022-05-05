@@ -1,0 +1,127 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj",
+        "projectName": "Dane",
+        "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj",
+        "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net4.8",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net4.8",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj",
+        "projectName": "Logika",
+        "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj": {
+                "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj",
+        "projectName": "Testy",
+        "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj",
+        "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net4.8",
+            "projectReferences": {
+              "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj": {
+                "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net4.8",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

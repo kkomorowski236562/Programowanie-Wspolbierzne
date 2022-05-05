@@ -11,7 +11,7 @@ namespace Logika
 
         public static logika CreateLayer(DaneApi dane = default(DaneApi))
         {
-            return new BusinessLogika(dane == null ? DaneApi.Create() : dane);
+            return new BusinessLogika(dane == null ? DaneApi.Stworz() : dane);
         }
 
         public abstract List<Kulki> Tablica_kulek();

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "C0FgVTZmRv2vrjOE8u375+ZbSPLbQxFyT3rg3VO1XtmOoq+v12urfYabsLe9s0mqzFsbKNGYdea9/qDS7T4Lbw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kamil\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
+    "C:\\Users\\Kamil\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",
+    "C:\\Users\\Kamil\\.nuget\\packages\\microsoft.net.test.sdk\\16.11.0\\microsoft.net.test.sdk.16.11.0.nupkg.sha512",
+    "C:\\Users\\Kamil\\.nuget\\packages\\mstest.testadapter\\2.2.7\\mstest.testadapter.2.2.7.nupkg.sha512",
+    "C:\\Users\\Kamil\\.nuget\\packages\\mstest.testframework\\2.2.7\\mstest.testframework.2.2.7.nupkg.sha512"
+  ],
+  "logs": []
+}

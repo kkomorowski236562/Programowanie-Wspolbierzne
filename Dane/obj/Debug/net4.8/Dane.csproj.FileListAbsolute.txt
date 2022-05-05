@@ -1,0 +1,5 @@
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Dane\obj\Debug\net4.8\Dane.csproj.AssemblyReference.cache
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Dane\obj\Debug\net4.8\Dane.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Dane\obj\Debug\net4.8\Dane.AssemblyInfoInputs.cache
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Dane\obj\Debug\net4.8\Dane.AssemblyInfo.cs
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Dane\obj\Debug\net4.8\Dane.csproj.CoreCompileInputs.cache

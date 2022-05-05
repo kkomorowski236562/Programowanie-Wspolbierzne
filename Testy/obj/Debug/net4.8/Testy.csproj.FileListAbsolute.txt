@@ -1,0 +1,7 @@
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Testy\obj\Debug\net4.8\Testy.csproj.AssemblyReference.cache
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Testy\obj\Debug\net4.8\Testy.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Testy\obj\Debug\net4.8\Testy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Testy\obj\Debug\net4.8\Testy.AssemblyInfoInputs.cache
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Testy\obj\Debug\net4.8\Testy.AssemblyInfo.cs
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Testy\obj\Debug\net4.8\Testy.csproj.CoreCompileInputs.cache
+C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Testy\bin\Debug\net4.8\CoverletSourceRootsMapping
