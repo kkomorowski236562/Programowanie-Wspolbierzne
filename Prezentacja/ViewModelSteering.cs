@@ -1,7 +1,7 @@
+using Model;
 using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using Model;
 
 namespace ViewModel
 {
@@ -9,8 +9,8 @@ namespace ViewModel
     {
         public ICommand StartButtonClick { get; set; }
 
-        public ViewModelSteering() : this(M.CreateLayer()) { }
-        public ViewModelSteering(M modelAbstractApi)
+        public ViewModelSteering() : this(ModelController.CreateLayer()) { }
+        public ViewModelSteering(ModelController modelAbstractApi)
         {
             ModelLayer = modelAbstractApi;
             StartButtonClick = new RelayCommand(() => ClickHandler());

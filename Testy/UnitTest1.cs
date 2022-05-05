@@ -1,5 +1,5 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Logika;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Testy
 {

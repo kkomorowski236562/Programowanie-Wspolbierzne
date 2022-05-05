@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logika
 {
@@ -25,16 +23,16 @@ namespace Logika
             Random rand = new Random();
             int X = rand.Next(-Size, Size);
             int Y = rand.Next(-Size, Size);
-            int SzX = rand.Next(1,3);
-            int SzY = rand.Next(1,3);
+            int SzX = rand.Next(1, 3);
+            int SzY = rand.Next(1, 3);
             k = new Kulki(number, X, Y, SzX, SzY);
-            Kulkis.Add( new Kulki(number, X, Y, SzX, SzY));   
+            Kulkis.Add(new Kulki(number, X, Y, SzX, SzY));
             return k;
         }
 
         public void moveKulke()
         {
-            for(int i =0; i<Kulkis.Count(); i++)
+            for (int i = 0; i < Kulkis.Count(); i++)
                 Kulkis[i].move(Size);
         }
     }

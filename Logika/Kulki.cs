@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logika
 {
@@ -29,9 +25,9 @@ namespace Logika
             int NX = X + SzX;
             int NY = Y + SzY;
 
-            if( NX > Wielkosc || NX < 0)
+            if (NX > Wielkosc || NX < 0)
                 SzX *= -1;
-            if( NY > Wielkosc || NY < 0)
+            if (NY > Wielkosc || NY < 0)
                 SzY *= -1;
             X += SzX;
             Y += SzY;

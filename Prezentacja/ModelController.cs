@@ -1,6 +1,4 @@
 ﻿using Logika;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace Model
@@ -54,7 +52,7 @@ namespace Model
 
             public override void dodaj_kulke(int ilosc)
             {
-                for( int i = 0; i< ilosc; i++ )
+                for (int i = 0; i < ilosc; i++)
                 {
                     logika.dodaj_kulke();
                     Circles.Add(new Model1(logika.dodaj_kulke()));
