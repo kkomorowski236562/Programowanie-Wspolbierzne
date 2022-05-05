@@ -15,7 +15,7 @@ namespace Logika
         }
 
         public int Size { get; set; }
-        public List<Kulki>? Kulkis { get; private set; }
+        public List<Kulki> Kulkis { get; private set; }
 
         public void stworz_kulki(int ilosc)
         {
@@ -32,8 +32,8 @@ namespace Logika
 
         public void moveKulke()
         {
-            for(int i =0; i<Kulkis.Sum(); i++)
-                kulka.move(Size);
+            for(int i =0; i<Kulkis.Capacity(); i++)
+                Kulkis[i].move(Size);
         }
     }
 }

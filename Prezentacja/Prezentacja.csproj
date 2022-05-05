@@ -51,10 +51,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewModelSteering.cs" />
     <Page Include="View.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="ModelController.cs" />
     <Compile Include="ViewModel.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="View.xaml.cs">

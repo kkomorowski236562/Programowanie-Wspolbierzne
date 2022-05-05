@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Logika;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Logika;
 
 namespace Model
 {
     public abstract class ModelController
     {
-        private Logika l;
+        private logika logika;
         public static ModelController CreateLayer(Logika.logika L = default(logika))
         {
             return new Object(L == null ? logika.CreateLayer() : L);
