@@ -1,2 +1,4 @@
 C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Logika\obj\Debug\Logika.csproj.AssemblyReference.cache
 C:\Users\Kamil\Desktop\STUDIA\SEMESTR 4\PRZEDMIOTY\PROGRAMOWANIE WSPÓŁBIEŻNE\TPW\tpw\Logika\obj\Debug\Logika.csproj.CoreCompileInputs.cache
+C:\Users\Kamil\Source\Repos\Logika\obj\Debug\Logika.csproj.AssemblyReference.cache
+C:\Users\Kamil\Source\Repos\Logika\obj\Debug\Logika.csproj.CoreCompileInputs.cache

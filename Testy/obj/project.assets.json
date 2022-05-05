@@ -556,11 +556,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj",
+      "projectUniqueName": "C:\\Users\\Kamil\\Source\\Repos\\Testy\\Testy.csproj",
       "projectName": "Testy",
-      "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj",
+      "projectPath": "C:\\Users\\Kamil\\Source\\Repos\\Testy\\Testy.csproj",
       "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\obj\\",
+      "outputPath": "C:\\Users\\Kamil\\Source\\Repos\\Testy\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -577,8 +577,8 @@
         "net48": {
           "targetAlias": "net4.8",
           "projectReferences": {
-            "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj": {
-              "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj"
+            "C:\\Users\\Kamil\\Source\\Repos\\Logika\\Logika.csproj": {
+              "projectPath": "C:\\Users\\Kamil\\Source\\Repos\\Logika\\Logika.csproj"
             }
           }
         }

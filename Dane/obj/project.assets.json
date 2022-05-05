@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj",
+      "projectUniqueName": "C:\\Users\\Kamil\\Source\\Repos\\Dane\\Dane.csproj",
       "projectName": "Dane",
-      "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj",
+      "projectPath": "C:\\Users\\Kamil\\Source\\Repos\\Dane\\Dane.csproj",
       "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\obj\\",
+      "outputPath": "C:\\Users\\Kamil\\Source\\Repos\\Dane\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",

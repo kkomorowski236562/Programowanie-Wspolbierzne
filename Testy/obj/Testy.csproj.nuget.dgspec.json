@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj": {}
+    "C:\\Users\\Kamil\\Source\\Repos\\Testy\\Testy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj": {
+    "C:\\Users\\Kamil\\Source\\Repos\\Dane\\Dane.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj",
+        "projectUniqueName": "C:\\Users\\Kamil\\Source\\Repos\\Dane\\Dane.csproj",
         "projectName": "Dane",
-        "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj",
+        "projectPath": "C:\\Users\\Kamil\\Source\\Repos\\Dane\\Dane.csproj",
         "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\obj\\",
+        "outputPath": "C:\\Users\\Kamil\\Source\\Repos\\Dane\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,16 +43,16 @@
         }
       }
     },
-    "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj": {
+    "C:\\Users\\Kamil\\Source\\Repos\\Logika\\Logika.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj",
+        "projectUniqueName": "C:\\Users\\Kamil\\Source\\Repos\\Logika\\Logika.csproj",
         "projectName": "Logika",
-        "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj",
+        "projectPath": "C:\\Users\\Kamil\\Source\\Repos\\Logika\\Logika.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {
-              "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj": {
-                "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Dane\\Dane.csproj"
+              "C:\\Users\\Kamil\\Source\\Repos\\Dane\\Dane.csproj": {
+                "projectPath": "C:\\Users\\Kamil\\Source\\Repos\\Dane\\Dane.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         "net48": {}
       }
     },
-    "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj": {
+    "C:\\Users\\Kamil\\Source\\Repos\\Testy\\Testy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj",
+        "projectUniqueName": "C:\\Users\\Kamil\\Source\\Repos\\Testy\\Testy.csproj",
         "projectName": "Testy",
-        "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\Testy.csproj",
+        "projectPath": "C:\\Users\\Kamil\\Source\\Repos\\Testy\\Testy.csproj",
         "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Testy\\obj\\",
+        "outputPath": "C:\\Users\\Kamil\\Source\\Repos\\Testy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -86,8 +86,8 @@
           "net48": {
             "targetAlias": "net4.8",
             "projectReferences": {
-              "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj": {
-                "projectPath": "C:\\Users\\Kamil\\Desktop\\STUDIA\\SEMESTR 4\\PRZEDMIOTY\\PROGRAMOWANIE WSPÓŁBIEŻNE\\TPW\\tpw\\Logika\\Logika.csproj"
+              "C:\\Users\\Kamil\\Source\\Repos\\Logika\\Logika.csproj": {
+                "projectPath": "C:\\Users\\Kamil\\Source\\Repos\\Logika\\Logika.csproj"
               }
             }
           }
