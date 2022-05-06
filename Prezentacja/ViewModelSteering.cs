@@ -5,12 +5,12 @@ using System.Windows.Input;
 
 namespace ViewModel
 {
-    public class ViewModelSteering : ViewModel
+    public class MainViewModelSteering : ViewModel
     {
         public ICommand StartButtonClick { get; set; }
 
-        public ViewModelSteering() : this(ModelController.CreateLayer()) { }
-        public ViewModelSteering(ModelController modelAbstractApi)
+        public MainViewModelSteering() : this(ModelController.CreateLayer()) { }
+        public MainViewModelSteering(ModelController modelAbstractApi)
         {
             ModelLayer = modelAbstractApi;
             StartButtonClick = new RelayCommand(() => ClickHandler());
