@@ -11,18 +11,19 @@
     </Window.DataContext>
     <StackPanel>
         <TextBox Name="tytul" Text="Ilosc kulek: " Width="150" />
-        <TextBox Name="kulki" Text="3" Width="150" BorderBrush="Black" BorderThickness="2"/>
-        <Button x:Name="przycisk"  Command="{Binding StartButtonClick}" Content="START" Width="100"/>
+        <TextBox Name="kulki" Width="150" BorderBrush="Black" BorderThickness="2" TextChanged="kulki_TextChanged"/>
+        <Button x:Name="StartPrzycisk"  Content="{Binding StartPrzycisk}" Command ="{Binding Start}" Width="100" Height="48" HorizontalAlignment="Left" Margin="10"/>
+        <Button x:Name="StopPrzycisk" Content="{Binding StopPrzycisk}" Command ="{Binding Stop}" Width="100" Height="48" HorizontalAlignment="Left" Margin="10"/>
 
         <Canvas>
-            <Grid x:Name="plansza" Height="300" Width="300" Margin="250,10,250,10" >
+            <Grid x:Name="plansza" Height="300" Width="300" Margin="250,-130,250,10" >
 
                 <Border BorderBrush="Black" Background="White" BorderThickness="2">
-                    <ItemsControl ItemsSource="{Binding Balls}" RenderTransformOrigin="0.496,0.706">
+                    <ItemsControl ItemsSource="{Binding Kulki}" RenderTransformOrigin="0.496,0.706">
 
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Ellipse Width= "20" Height="20" Fill="Tomato" />
+                                <Ellipse Width= "10" Height="10" Fill="Tomato" />
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
 

@@ -7,14 +7,18 @@ namespace ViewModel
 {
     public class MainViewModelSteering : ViewModel
     {
-        public ICommand StartButtonClick { get; set; }
+        public ICommand Start { get; set; }
+        public ICommand Stop { get; set; }
 
         public MainViewModelSteering() : this(ModelController.CreateLayer()) { }
         public MainViewModelSteering(ModelController modelAbstractApi)
         {
             ModelLayer = modelAbstractApi;
-            StartButtonClick = new RelayCommand(() => ClickHandler());
+            Start = new RelayCommand(() => start());
+            Stop = new RelayCommand(() => stop());
             Kulki = modelAbstractApi.GetModels();
+            _startprzycisk = "Start";
+            _stopprzycisk = "Stop";
         }
 
         public string InputNum
@@ -25,6 +29,29 @@ namespace ViewModel
                 RaisePropertyChanged(nameof(number));
             }
             get => number;
+        }
+
+        private string _startprzycisk;
+        private string _stopprzycisk;
+
+        public string StartPrzycisk
+        {
+            get => _startprzycisk;
+            set
+            {
+                _startprzycisk = value;
+                RaisePropertyChanged("StartPrzycisk");
+            }
+        }
+
+        public string StopPrzycisk
+        {
+            get => _stopprzycisk;
+            set
+            {
+                _stopprzycisk = value;
+                RaisePropertyChanged("StopPrzycisk");
+            }
         }
 
         public int InputBox()
@@ -38,12 +65,16 @@ namespace ViewModel
             return 0;
         }
 
-
-        private void ClickHandler()
+        public void start()
         {
             ModelLayer.dodaj_kulke(InputBox());
             ModelLayer.Start();
-
+            StartPrzycisk = "Restart";
+        }
+        public void stop()
+        {
+            ModelLayer.Stop();
+            StartPrzycisk = "Start";
         }
         private ModelController ModelLayer;
         private string number;
