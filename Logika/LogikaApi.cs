@@ -1,4 +1,5 @@
 ﻿using Dane;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -6,73 +7,70 @@ using System.Threading.Tasks;
 
 namespace Logika
 {
-    public abstract class logika
+    public abstract class LogikaAbstrachApi
     {
-
-        public static logika CreateLayer(DaneApi dane = default(DaneApi))
-        {
-            return new BusinessLogika(dane == null ? DaneApi.Stworz() : dane);
-        }
-
-        public abstract List<Kulki> Tablica_kulek();
-        public abstract int Ilosc_kulek();
-        public abstract int Wielkosc_pudelka();
+        //gettery do danych
+        public abstract int getX(int i);
+        public abstract int getY(int i);
+        public abstract int getWielkosc();
+        public abstract int getIlosc();
+        //funkcje obslugujace warstwe danych poprzez logike
+        public abstract IList StworzListeKulek(int ilosc);
+        public abstract void OdswiezKulki();
         public abstract void Start();
         public abstract void Stop();
-        public abstract Kulki dodaj_kulke();
-
-        private class BusinessLogika : logika
+        public static LogikaAbstrachApi CreateLayer()
         {
-            public Task Update { get; private set; }
-            public Pudelko map = new Pudelko(300);
-            private readonly DaneApi WarstwaDanych;
-            private bool running;
-
-
-            public BusinessLogika(DaneApi dataLayerAPI)
-            {
-                WarstwaDanych = dataLayerAPI;
-            }
-
-            public override void Start()
-            {
-                this.running = true;
-                Update = new Task(MoveBallsInLoop);
-                Update.Start();
-            }
-
-
-            private void MoveBallsInLoop()
-            {
-                while (this.running)
-                {
-                    map.moveKulke();
-                    Thread.Sleep(10);
-                }
-            }
-
-            public override void Stop()
-            {
-                this.running = false;
-            }
-
-            override public List<Kulki> Tablica_kulek()
-            {
-                return map.Kulkis;
-            }
-            override public int Ilosc_kulek()
-            {
-                return map.Kulkis.Count;
-            }
-            override public int Wielkosc_pudelka()
-            {
-                return map.Size;
-            }
-            public override Kulki dodaj_kulke()
-            {
-                return map.stworz_kulki();
-            }
+            return new LogikaApi();
+        }
+    }
+    internal class LogikaApi : LogikaAbstrachApi
+    {
+        // wskaznik na klase przechowujaca dane o kulkach i pudelku
+        private DaneAbstractApi dane;
+        // reszta parametrow klasy Logika / Threading tasks
+        private List<Task> tasks;
+        // konstruktor
+        public LogikaApi()
+        {
+            dane = DaneAbstractApi.CreateApi();
+        }
+        // funckje zadeklarowane w klasie rodzicu
+        public override int getX(int i)
+        {
+            return dane.getX(i);
+        }
+        public override int getY(int i)
+        {
+            return dane.getY(i);
+        }
+        public override int getWielkosc()
+        {
+            return dane.getWielkosc();
+        }
+        public override int getIlosc()
+        {
+            return dane.GetIlosc();
+        }
+        public override IList StworzListeKulek(int ilosc) => dane.StworzKulki(ilosc);
+        public override async void OdswiezKulki()
+        {
+            await Task.Delay(30);
+            dane.OdswiezKulki();
         }
 
+        public int Tasks
+        {
+            get => tasks.Count;
+        }
+        public override void Start()
+        {
+            tasks.Add(Task.Run(() => OdswiezKulki()));
+        }
+
+        public override void Stop()
+        {
+
+        }
     }
 }
