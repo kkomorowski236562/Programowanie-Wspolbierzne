@@ -13,7 +13,7 @@ namespace Model
         public abstract void Stop();
         public abstract int getX(int i);
         public abstract int getY(int i);
-        public abstract int getWielkosc();
+        public abstract int getWielkosc(int i);
 
         public static ModelAbstractApi CreateApi(int Wielkosc)
         {
@@ -41,9 +41,9 @@ namespace Model
             return logika.getY(i);
         }
 
-        public override int getWielkosc()
+        public override int getWielkosc(int i)
         {
-            return logika.getWielkosc();
+            return logika.getWielkosc(i);
         }
         public override IList KulkiModelu(int id) => logika.StworzListeKulek(id);
 

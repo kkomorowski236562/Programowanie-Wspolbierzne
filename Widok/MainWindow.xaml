@@ -1,0 +1,40 @@
+﻿<Window x:Class="View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:ViewModel;assembly=ViewModel"
+        xmlns:local="clr-namespace:View"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="Bouncing Balls" Height="600" Width="796" Background="ForestGreen"
+        
+        Foreground="Black" BorderBrush="Blue">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+
+        <ContentPresenter Content="{Binding Canvas}" Focusable="true" HorizontalAlignment="Center" Width="400" Margin="0,40,0,144"/>
+        <Border BorderBrush="Black" BorderThickness="5,5,5,5" Height="406" Width="400" 
+                HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,28,0,0"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,465,0,0" 
+                 TextWrapping="Wrap" Text="{Binding _ilosckulek}"  
+                 VerticalAlignment="Top" Width="200" Height="40" TextAlignment="Center" 
+                 FontSize="24px" BorderBrush="Black" BorderThickness="3,3,3,3" />
+        <Button Margin="195,510,195,5" Content="Start" FontSize="30" Command="{Binding Start}" />
+
+        <Canvas>
+            <ItemsControl>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="{Binding Wielkosc}" Width="{Binding Wielkosc}"></Ellipse>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Canvas>
+
+    </Grid>
+
+</Window>

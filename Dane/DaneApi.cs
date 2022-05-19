@@ -15,8 +15,7 @@ namespace Dane
         public abstract IList StworzKulki(int ilosc);
         public abstract int getX(int i);
         public abstract int getY(int i);
-        public abstract int getDiagonal(int i);
-        public abstract int getWielkosc();
+        public abstract int getWielkosc(int i);
         public static DaneAbstractApi CreateApi()
         {
             return new DaneApi();
@@ -32,9 +31,9 @@ namespace Dane
         }
         private ObservableCollection<Kulki> kulki { get; }
         public ObservableCollection<Kulki> Kulki => kulki;
-        public override int getWielkosc()
+        public override int getWielkosc(int i)
         {
-            return Wielkosc;
+            return 2 * kulki[i].PR;
         }
 
         public override int getX(int i)
@@ -44,10 +43,6 @@ namespace Dane
         public override int getY(int i)
         {
             return kulki[i].y;
-        }
-        public override int getDiagonal(int i)
-        {
-            return 2 * kulki[i].PR;
         }
 
         public override IList StworzKulki(int number)

@@ -12,7 +12,7 @@ namespace Logika
         //gettery do danych
         public abstract int getX(int i);
         public abstract int getY(int i);
-        public abstract int getWielkosc();
+        public abstract int getWielkosc(int i);
         public abstract int getIlosc();
         //funkcje obslugujace warstwe danych poprzez logike
         public abstract IList StworzListeKulek(int ilosc);
@@ -44,9 +44,9 @@ namespace Logika
         {
             return dane.getY(i);
         }
-        public override int getWielkosc()
+        public override int getWielkosc(int i)
         {
-            return dane.getWielkosc();
+            return dane.getWielkosc(i);
         }
         public override int getIlosc()
         {
