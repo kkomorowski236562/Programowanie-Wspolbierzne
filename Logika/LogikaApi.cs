@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Logika
 {
-    public abstract class LogikaAbstrachApi
+    public abstract class LogikaAbstractApi
     {
         //gettery do danych
         public abstract int getX(int i);
@@ -19,12 +19,12 @@ namespace Logika
         public abstract void OdswiezKulki();
         public abstract void Start();
         public abstract void Stop();
-        public static LogikaAbstrachApi CreateLayer()
+        public static LogikaAbstractApi CreateLayer()
         {
             return new LogikaApi();
         }
     }
-    internal class LogikaApi : LogikaAbstrachApi
+    internal class LogikaApi : LogikaAbstractApi
     {
         // wskaznik na klase przechowujaca dane o kulkach i pudelku
         private DaneAbstractApi dane;
