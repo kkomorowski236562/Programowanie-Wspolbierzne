@@ -16,23 +16,27 @@ namespace ViewModel
             ModelLayer = modelAbstractApi;
             Start = new RelayCommand(() => start());
             Stop = new RelayCommand(() => stop());
-            Kulki = modelAbstractApi.GetModels();
+            _Kulki = modelAbstractApi.GetModels();
+            _ilosckulek = 5;
             _startprzycisk = "Start";
             _stopprzycisk = "Stop";
         }
 
-        public string InputNum
-        {
-            set
-            {
-                number = value;
-                RaisePropertyChanged(nameof(number));
-            }
-            get => number;
-        }
-
         private string _startprzycisk;
         private string _stopprzycisk;
+        private int _ilosckulek;
+
+        public string IloscZczytana
+        {
+            get => _ilosckulek.ToString();
+            set
+            {
+                int pom;
+                if (int.TryParse(value, out pom) && pom != 0)
+                    _ilosckulek = Math.Abs(pom);
+                RaisePropertyChanged(nameof(IloscZczytana));
+            }
+        }
 
         public string StartPrzycisk
         {
@@ -57,17 +61,13 @@ namespace ViewModel
         public int InputBox()
         {
             int count;
-            if (Int32.TryParse(InputNum, out count))
-            {
-                count = Int32.Parse(InputNum);
-                return count;
-            }
-            return 0;
+            count = Int32.Parse(IloscZczytana);
+            return count;
         }
 
         public void start()
         {
-            ModelLayer.dodaj_kulke(InputBox());
+            ModelLayer.Add_Ball(InputBox());
             ModelLayer.Start();
             StartPrzycisk = "Restart";
         }
@@ -77,8 +77,7 @@ namespace ViewModel
             StartPrzycisk = "Start";
         }
         private ModelController ModelLayer;
-        private string number;
-        public ObservableCollection<Model1> Kulki;
+        public ObservableCollection<Model1> _Kulki;
     }
 
 

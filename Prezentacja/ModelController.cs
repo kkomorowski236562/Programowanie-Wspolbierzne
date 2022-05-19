@@ -1,4 +1,5 @@
 ﻿using Logika;
+using System;
 using System.Collections.ObjectModel;
 
 namespace Model
@@ -17,8 +18,8 @@ namespace Model
         public abstract void Stop();
 
         //public abstract void Start();
-        public abstract int getSize();
-        public abstract void dodaj_kulke(int ilosc);
+        public abstract int GetSize();
+        public abstract void Add_Ball(int ilosc);
 
         // implementacja Api
         private class Object : ModelController
@@ -37,6 +38,7 @@ namespace Model
             override public void Start()
             {
                 logika.Start();
+                Console.WriteLine("hello");
             }
 
             public override void Stop()
@@ -44,23 +46,19 @@ namespace Model
                 logika.Stop();
             }
 
-
-            override public int getSize()
+            override public int GetSize()
             {
                 return logika.Wielkosc_pudelka();
             }
 
-            public override void dodaj_kulke(int ilosc)
+            public override void Add_Ball(int ilosc)
             {
                 for (int i = 0; i < ilosc; i++)
                 {
-                    logika.dodaj_kulke();
-                    Circles.Add(new Model1(logika.dodaj_kulke()));
-
+                    logika.Dodaj_kulke();
+                    Circles.Add(new Model1(logika.Dodaj_kulke()));
                 }
-
             }
-
         }
     }
 }

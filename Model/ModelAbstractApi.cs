@@ -1,6 +1,7 @@
 ﻿using Logika;
 using System.Collections;
 
+
 //model - warstwa zarzadzajaca logika na potrzeby widoku "view"
 namespace Model
 {

@@ -11,7 +11,7 @@
     </Window.DataContext>
     <StackPanel>
         <TextBox Name="tytul" Text="Ilosc kulek: " Width="150" />
-        <TextBox Name="kulki" Width="150" BorderBrush="Black" BorderThickness="2" TextChanged="kulki_TextChanged"/>
+        <TextBox Text="{Binding ilosckulek, UpdateSourceTrigger=PropertyChanged}" Width="150" BorderBrush="Black" BorderThickness="2" TextChanged="kulki_TextChanged"/>
         <Button x:Name="StartPrzycisk"  Content="{Binding StartPrzycisk}" Command ="{Binding Start}" Width="100" Height="48" HorizontalAlignment="Left" Margin="10"/>
         <Button x:Name="StopPrzycisk" Content="{Binding StopPrzycisk}" Command ="{Binding Stop}" Width="100" Height="48" HorizontalAlignment="Left" Margin="10"/>
 
