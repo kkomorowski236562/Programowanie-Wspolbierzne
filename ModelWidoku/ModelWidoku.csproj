@@ -4,8 +4,12 @@
 		<TargetFramework>net6.0</TargetFramework>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="Extended.Wpf.Toolkit" Version="4.3.0" />
+	</ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\Logika\Logika.csproj" />
+    <ProjectReference Include="..\Model\Model.csproj" />
   </ItemGroup>
 
 </Project>
