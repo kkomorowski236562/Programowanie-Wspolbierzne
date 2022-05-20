@@ -13,6 +13,7 @@
         <mw:Steering/>
     </Window.DataContext>
 
+   
     <StackPanel>
         <TextBox Name="tytul" Text="Ilosc kulek: " Width="150" />
         <TextBox Text="{Binding ilosckulek, UpdateSourceTrigger=PropertyChanged}" Width="150" BorderBrush="Black" BorderThickness="2" TextChanged="kulki_TextChanged"/>
@@ -20,7 +21,7 @@
         <Button x:Name="StopPrzycisk" Content="{Binding StopPrzycisk}" Command ="{Binding Stop}" Width="100" Height="48" HorizontalAlignment="Left" Margin="10"/>
 
         <Canvas>
-            <Grid x:Name="plansza" Height="300" Width="300" Margin="250,-130,250,10" >
+            <Grid x:Name="plansza" Height="400" Width="400" Margin="200,-130,250,10" >
 
                 <Border BorderBrush="Black" Background="White" BorderThickness="2">
                     <ItemsControl ItemsSource="{Binding Kulki}" RenderTransformOrigin="0.496,0.706">
@@ -36,5 +37,32 @@
             </Grid>
 
         </Canvas>
-    </StackPanel>
+    </StackPanel> 
+    
+    <!--
+
+    <Grid Height="569" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="766*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Width="800" Height="480" VerticalAlignment="Top" HorizontalAlignment="Left" Background="White" Grid.ColumnSpan="2">
+            <Border BorderBrush="Blue" BorderThickness="2,2,2,2" Height="480" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top"></Border>
+            <ItemsControl Name="Balls" ItemsSource="{Binding Kulki}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Canvas>
+                            <Ellipse Fill="Blue"  Width="{Binding 1}" Height="{Binding 1}" Canvas.Left="{Binding 1}" Canvas.Top="{Binding 1}"/>
+                        </Canvas>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Canvas>
+        <TextBox HorizontalAlignment="Left" Margin="544,521,0,0" Text="{Binding 1}"  VerticalAlignment="Top" Width="200" Height="36" TextAlignment="Center" FontSize="20px" Grid.Column="1" />
+        <Button Margin="6,489,548,12" Content="START" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40"   Command="{Binding RunCommand}" Grid.Column="1" />
+        <Button x:Name= "StartPrzycisk" Margin="266,489,272,12" Content="STOP" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding StopPrzycisk}" Grid.Column="1"/>
+        <Button x:Name= "AddButton" Width="200" Margin="544,489,21,48" Content="ADD" FontSize="20" Content ="nic" BorderThickness="0,0,0,0" Grid.Column="1"/>
+    </Grid>
+    
+    -->
 </Window>

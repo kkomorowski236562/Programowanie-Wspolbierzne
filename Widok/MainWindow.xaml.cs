@@ -23,5 +23,10 @@ namespace Widok
         {
             InitializeComponent();
         }
+
+        private void kulki_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
     }
 }

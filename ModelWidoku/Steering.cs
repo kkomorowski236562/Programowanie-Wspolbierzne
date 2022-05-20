@@ -1,5 +1,6 @@
 ﻿using Model;
 using System;
+using System.Collections;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
@@ -8,40 +9,34 @@ namespace ModelWidoku
     public class Steering : Controler
     {
         private readonly ModelAbstractApi _api;
-        public int kID;
-        public int X
-        {
-            get
-            {
-                return _api.getX(kID);
-            }
-        }
-        public int Y
-        {
-            get
-            {
-                return _api.getY(kID);
-            }
-        }
-        public int Wielkosc
-        {
-            get
-            {
-                return _api.getWielkosc(kID);
-            }
-        }
-        public ICommand _start { get; set; }
-        public ICommand _stop { get; set; }
+        public ICommand start { get; set; }
+        public ICommand stop { get; set; }
         public Steering()
         {
             _api = ModelAbstractApi.CreateApi(400);
-            _start = new RelayCommand(StworzKulki);
-            _stop = new RelayCommand(Stop);
+            start = new RelayCommand(Start);
+            stop = new RelayCommand(Stop);
+            _startprzycisk = "Start";
+            _stopprzycisk = "Stop";
         }
 
         private string _startprzycisk;
         private string _stopprzycisk;
         private int _ilosckulek;
+        private IList _kulki;
+
+        public IList Kulki
+        {
+            get => _kulki;
+            set
+            {
+                if (value.Equals(_kulki))
+                    return;
+                _kulki = value;
+                RaisePropertyChanged();
+            }
+        }
+
 
         public string IloscZczytana
         {
@@ -82,9 +77,11 @@ namespace ModelWidoku
             return count;
         }
 
-        public void StworzKulki()
+        public void Start()
         {
-            _api.KulkiModelu(_ilosckulek);
+            Kulki = _api.KulkiModelu(_ilosckulek);
+            _api.Start();
+            StartPrzycisk = "Restart";
         }
 
         public void Stop()

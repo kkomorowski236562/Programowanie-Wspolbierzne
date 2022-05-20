@@ -1,18 +1,37 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace Dane
 {
-    public class Kulki
+    public interface IBall : INotifyPropertyChanged
     {
-        public int X { get; private set; }
-        public int Y { get; private set; }
-        public int ID { get; private set; }
+        int x { get; set; }
+        int y { get; set; }
+        int ID { get; }
+        int PR { get; }
+        double Waga { get; }
+        void Ruch();
+        void Reset();
+        void CreateTask(int Przedzial);
+    }
+    internal class Kulki : IBall
+    {
+        private int X;
+        private int Y;
+        private int id;
         private readonly int Pr;
-        private bool stop { get; set; }
-        private Task task { get; set; }
+        private readonly double waga;
+        private bool stop = false;
+        private Task task;
         private Stopwatch stopwatch = new Stopwatch();
+        public event PropertyChangedEventHandler PropertyChanged;
+        internal void RaisePropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         public int PR 
         { 
             get => Pr; 
@@ -23,6 +42,7 @@ namespace Dane
                 PR = value;
             }
         }
+        public double Waga { get => waga;}
         public int x 
         { 
             get => X; 
@@ -43,15 +63,15 @@ namespace Dane
                 y = value;
             }
         }
+        public int ID { get => id; }
 
-        public Kulki(int ID, int X, int Y, int Pr)
+        public Kulki(int id, int X, int Y, int Pr, double waga)
         {
-            this.ID = ID;
+            this.id = id;
             this.X = X;
             this.Y = Y;
-            this.x = X;
-            this.y = Y;
             this.Pr = Pr;
+            this.waga = waga;
         }
 
         public void Ruch()
@@ -80,8 +100,10 @@ namespace Dane
                 if (!stop)
                 {
                     Ruch();
-                    await Task.Delay((int)(Przedzial - stopwatch.ElapsedMilliseconds));
                 }
+                stopwatch.Stop();
+
+                await Task.Delay((int)(Przedzial - stopwatch.ElapsedMilliseconds));
             }
         }
     }

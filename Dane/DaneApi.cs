@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.ObjectModel;
+using System.Threading;
 
 namespace Dane
 {
@@ -9,12 +10,8 @@ namespace Dane
     {
         public int Wielkosc { get; set; }
         public abstract int GetIlosc();
-        public abstract void OdswiezKulki();
-        public abstract bool WykryjPokrycie(Kulki k1, Kulki k2);
-        public abstract void RuchKulki(Kulki k);
         public abstract IList StworzKulki(int ilosc);
-        public abstract int getX(int i);
-        public abstract int getY(int i);
+        public abstract IBall GetKulke(int id);
         public abstract int getWielkosc(int i);
         public static DaneAbstractApi CreateApi()
         {
@@ -26,122 +23,44 @@ namespace Dane
         public new readonly int Wielkosc = Pudelko.Wielkosc;
         public DaneApi()
         {
-            kulki = new ObservableCollection<Kulki>();
+            kulki = new ObservableCollection<IBall>();
             Wielkosc = Pudelko.Wielkosc;
         }
-        private ObservableCollection<Kulki> kulki { get; }
-        public ObservableCollection<Kulki> Kulki => kulki;
+        private ObservableCollection<IBall> kulki { get; }
+        public ObservableCollection<IBall> Kulki => kulki;
         public override int getWielkosc(int i)
         {
             return 2 * kulki[i].PR;
         }
 
-        public override int getX(int i)
-        {
-            return kulki[i].x;
-        }
-        public override int getY(int i)
-        {
-            return kulki[i].y;
-        }
-
         public override IList StworzKulki(int number)
         {
             Random rand = new Random();
+            Mutex mute = new Mutex();
             if (number > 0)
             {
+                int licznik = kulki.Count;
                 for (int i = 0; i < number; i++)
                 {
-                    int pr = 20;
+                    mute.WaitOne();
+                    int pr = 10;
+                    double w = 30;
                     int x = rand.Next(pr, Pudelko.Wielkosc - pr);
                     int y = rand.Next(pr, Pudelko.Wielkosc - pr);
-                    Kulki ball = new Kulki(i, x, y, pr);
-                    kulki.Add(ball);
+                    Kulki k = new Kulki(i, x, y, pr, w);
+                    kulki.Add(k);
+                    mute.ReleaseMutex();
                 }
             }
             return kulki;
         }
-
-        public override void RuchKulki(Kulki k)
-        {
-            if (k.x + k.PR < Pudelko.Wielkosc - k.PR && k.x + k.PR >= 0)
-            {
-                k.x = k.x + k.PR;
-            }
-            else
-            {
-                if (k.x + k.PR >= Pudelko.Wielkosc)
-                {
-                    k.x = Pudelko.Wielkosc - k.PR;
-                }
-                else
-                {
-                    k.x = k.PR;
-                }
-                k.PR *= -1;
-            }
-
-            if (k.y + k.PR < Pudelko.Wielkosc - k.PR && k.y + k.PR > 0)
-            {
-                k.y = k.y + k.PR;
-            }
-            else
-            {
-                if (k.y + k.PR >= Pudelko.Wielkosc)
-                {
-                    k.y = Pudelko.Wielkosc - k.PR;
-                }
-                else
-                {
-                    k.y = k.PR;
-                }
-                k.PR *= -1;
-            }
-
-        }
         public override int GetIlosc()
         {
-            int counter = 0;
-            foreach (Kulki k in kulki)
-            {
-                counter += 1;
-            }
-            return counter;
+            return kulki.Count;
         }
-
-        public override void OdswiezKulki()
+        public override IBall GetKulke(int id)
         {
-            foreach (Kulki k in kulki)
-            {
-                RuchKulki(k);
-            }
-            for (int i = 0; i < kulki.Count; i++)
-            {
-                for (int j = 0; j < kulki.Count; j++)
-                {
-                    if (i != j)
-                    {
-                        if (WykryjPokrycie(kulki[i], kulki[j]))
-                        {
-                            kulki[i].PR *= -1;
-                            kulki[j].PR *= -1;
-                        }
-                    }
-                }
-            }
+            return kulki[id];
         }
-
-        public override bool WykryjPokrycie(Kulki k1, Kulki k2)
-        {
-            bool flag = false;
-
-            if ((k1.x - k2.x <= k2.PR) && (k1.y - k2.y == k2.PR))
-            {
-                flag = true;
-            }
-
-            return flag;
-        }
-
     }
 }
